@@ -21,3 +21,4 @@ npm start
  - [feature-redux-logic](https://github.com/kevinast/feature-redux-logic) - redux-logic aspect plugin for feature-u. Extends feature-u with redux-logic for managing business logic and performing async processing.
 
 [feature-u]: http://feature-u.js.org
+[redux-logic]: https://github.com/jeffbski/redux-logic
