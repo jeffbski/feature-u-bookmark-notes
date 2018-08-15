@@ -1,0 +1,20 @@
+.addForm {
+  display: grid;
+  grid: ". errors"
+          "url-label url-field"
+          "tags-label tags-field"
+          "notes-label notes-field"
+          ". notes-field" 64px
+          ". add-button"
+          / 100px 400px;
+  grid-gap: 12px;
+}
+
+.errors { grid-area: errors; }
+.url-label { grid-area: url-label; justify-self: end; }
+.tags-label { grid-area: tags-label;  justify-self: end; }
+.notes-label { grid-area: notes-label;  justify-self: end; }
+.url-field { grid-area: url-field; }
+.tags-field { grid-area: tags-field; }
+.notes-field { grid-area: notes-field; }
+.add-button { grid-area: add-button; width: 100px; font-size: 16px; }

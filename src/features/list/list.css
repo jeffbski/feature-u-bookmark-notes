@@ -1,0 +1,20 @@
+.list {
+  display: grid;
+  grid-gap: 24px;
+}
+
+input[name="filter"] { margin-left: 12px; }
+
+.item {
+  display: grid;
+  grid-gap: 4px;
+  grid: "url url remove"
+          "tags tags tags"
+          "notes notes notes"
+          / 1fr 1fr 20px;
+}
+
+.item .url { grid-area: url; }
+.item .tags { grid-area: tags; color: darkgreen; }
+.item .removeButton { grid-area: remove; width: 80px; height: 24px; justify-self: end; }
+.item .notes { grid-area: notes; }

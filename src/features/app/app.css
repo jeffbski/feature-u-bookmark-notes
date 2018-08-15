@@ -1,0 +1,24 @@
+body { font-size: 24px; }
+
+.app {
+  margin: 24px;
+  display: grid;
+  grid: "header header header"
+        ". main ."
+        / 1fr 80% 1fr;
+  grid-gap: 24px;
+}
+
+header {
+  grid-area: header;
+}
+
+header a { margin: 4px; }
+
+main {
+  grid-area: main;
+}
+
+.errors {
+  color: red;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "feature-u-bookmark-notes",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "ajv": "^6.5.2",
+    "feature-redux": "^1.0.0",
+    "feature-redux-logic": "^1.0.0",
+    "feature-u": "^1.0.0",
+    "formik": "^1.0.2",
+    "localforage": "^1.7.2",
+    "lodash": "^4.17.10",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.6.1",
+    "redux-logic": "^0.15.3",
+    "yup": "^0.24.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
