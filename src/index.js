@@ -10,7 +10,7 @@ const aspects = [
   createReducerAspect(),
   createLogicAspect()
 ];
-
+ 
 launchApp({
   aspects,
   features,

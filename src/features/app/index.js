@@ -32,7 +32,7 @@ export default createFeature({
   },
 
   appWillStart({fassets, curRootAppElm}) {
-    // it is good to check that we are not ov
+    // it is good to check that we are not overriding an existing one
     if (curRootAppElm) { throw new Error('app feature is defining curRootAppElm but one was already provided'); }
 
     const KeyAndLinkComps = fassets.get('*.link.comp@withKeys');

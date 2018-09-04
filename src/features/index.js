@@ -11,7 +11,7 @@ const features = [
   homeFeature,
   aboutFeature,
   listFeature,
-  //   loadCannedFeature,
+  // loadCannedFeature,
   addFeature,
   loadSaveLocalForageFeature
 ];
