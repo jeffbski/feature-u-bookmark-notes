@@ -17,7 +17,7 @@
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
     "redux-actions": "^2.6.1",
-    "redux-logic": "^0.15.3",
+    "redux-logic": "^1.0.2",
     "yup": "^0.24.1"
   },
   "scripts": {
