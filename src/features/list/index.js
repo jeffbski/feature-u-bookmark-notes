@@ -23,9 +23,12 @@ const selectors = {
   filter: get(`${statePath}.filter`)
 };
 
-// we just need identity payload action creators in our featureName ns
+// we just need identity payload action creators in our featureName namespace/prefix
+// action types will be list/add, list/remove, list/load, ...
 const actions = createActions(
-  'add', 'remove', 'load', 'loadSuccess', 'loadFailed', 'filterChange', { prefix: featureName });
+  'add', 'remove', 'load', 'loadSuccess', 'loadFailed', 'filterChange',
+  { prefix: featureName }
+);
 
 const reducer = createReducer({
   [actions.add]: (state, action) => {

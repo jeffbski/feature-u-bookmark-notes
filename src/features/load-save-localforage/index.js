@@ -3,11 +3,10 @@ import { createLogic } from 'redux-logic';
 import localforage from 'localforage';
 import { createActions } from '@jeffbski/redux-util';
 
-// make sure featureName is camelCased so works well with
-// redux-actions and property names
 const featureName = 'loadSaveLocalForage';
 
 // we just need an identity payload action creator in our namespace
+// action type will be loadSaveLocalForage/saved
 const actions = createActions('saved', { prefix: featureName });
 
 const itemStore = localforage.createInstance({
