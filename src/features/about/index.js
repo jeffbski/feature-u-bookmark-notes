@@ -1,11 +1,8 @@
 import React from 'react';
 import {createFeature} from 'feature-u';
 import { Link, Route } from 'react-router-dom';
-import {camelCase} from 'lodash/fp';
 
-// make sure featureName is camelCased so works well with
-// redux-actions and property names
-const featureName = camelCase('about');
+const featureName = 'about';
 const featureURLPath = `/${featureName}`; // the URL path is /foo
 
 const link = () => <Link to={featureURLPath}>About</Link>;

@@ -1,12 +1,9 @@
 import React from 'react';
 import {createFeature} from 'feature-u';
 import { BrowserRouter } from 'react-router-dom';
-import {camelCase} from 'lodash/fp';
 import './app.css';
 
-// make sure featureName is camelCased so works well with
-// redux-actions and property names
-const featureName = camelCase('app');
+const featureName = 'app';
 
 const App = ({ KeyAndLinkComps, KeyAndRouteComps }) => <BrowserRouter>
   <div className="app">

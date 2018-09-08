@@ -5,12 +5,9 @@ import { withFormik, Form, Field } from 'formik';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import * as yup from 'yup';
-import {camelCase} from 'lodash/fp';
 import './add.css';
 
-// make sure featureName is camelCased so works well with
-// redux-actions and property names
-const featureName = camelCase('add');
+const featureName = 'add';
 const featureURLPath = `/${featureName}`;
 
 const link = () => <Link to={featureURLPath}>Add</Link>;

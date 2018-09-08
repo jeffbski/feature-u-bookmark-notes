@@ -1,6 +1,7 @@
 # Bookmark Notes
 
-A simple web app built with [feature-u] using React.js, redux, and [redux-logic].
+A simple web app built with [feature-u] using React.js, redux,
+[redux-util], and [redux-logic].
 
 It is built to showcase how feature-u helps with feature-based development.
 
@@ -22,3 +23,4 @@ npm start
 
 [feature-u]: https://feature-u.js.org
 [redux-logic]: https://github.com/jeffbski/redux-logic
+[redux-util]: https://github.com/jeffbski/redux-util

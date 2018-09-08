@@ -2,14 +2,12 @@ import React from 'react';
 import {createFeature} from 'feature-u';
 import {slicedReducer} from 'feature-redux';
 import { Link, Route } from 'react-router-dom';
-import { createActions, handleActions } from 'redux-actions';
-import { get, set, update, compose, camelCase } from 'lodash/fp';
+import { createActions, createReducer } from '@jeffbski/redux-util';
+import { get, set, update, compose } from 'lodash/fp';
 import { connect } from 'react-redux';
 import './list.css';
 
-// make sure featureName is camelCased so works well with
-// redux-actions and property names
-const featureName = camelCase('list');
+const featureName = 'list';
 const featureURLPath = `/${featureName}`;
 const statePath = `${featureName}`; // where to mount reducer in global state
 
@@ -25,18 +23,11 @@ const selectors = {
   filter: get(`${statePath}.filter`)
 };
 
-const actions = createActions({
-  [featureName]: {
-    add: item => item,
-    remove: item => item,
-    load: () => null,
-    loadSuccess: items => items,
-    loadFailed: err => err,
-    filterChange: filter => filter
-  }
-})[featureName];
+// we just need identity payload action creators in our featureName ns
+const actions = createActions(
+  'add', 'remove', 'load', 'loadSuccess', 'loadFailed', 'filterChange', { prefix: featureName });
 
-const reducer = handleActions({
+const reducer = createReducer({
   [actions.add]: (state, action) => {
     const newItem = action.payload;
     return update('items', items =>

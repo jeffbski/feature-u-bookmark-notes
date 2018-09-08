@@ -1,8 +1,7 @@
 import {createFeature, expandWithFassets} from 'feature-u';
 import { createLogic } from 'redux-logic';
-import {camelCase} from 'lodash/fp';
 
-const featureName = camelCase('load-canned');
+const featureName = 'load-canned';
 
 const cannedList = [
   { url: 'https://codewinds.com/', tags: 'functional, training', notes: 'My site' },

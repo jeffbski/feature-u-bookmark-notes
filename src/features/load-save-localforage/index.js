@@ -1,18 +1,14 @@
 import {createFeature, expandWithFassets} from 'feature-u';
 import { createLogic } from 'redux-logic';
 import localforage from 'localforage';
-import { createActions } from 'redux-actions';
-import {camelCase} from 'lodash/fp';
+import { createActions } from '@jeffbski/redux-util';
 
 // make sure featureName is camelCased so works well with
 // redux-actions and property names
-const featureName = camelCase('loadSaveLocalForage');
+const featureName = 'loadSaveLocalForage';
 
-const actions = createActions({
-  [featureName]: {
-    saved: x => x
-  }
-})[featureName];
+// we just need an identity payload action creator in our namespace
+const actions = createActions('saved', { prefix: featureName });
 
 const itemStore = localforage.createInstance({
   name: 'bookmark-notebook',
